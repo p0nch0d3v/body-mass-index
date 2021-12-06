@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    image: node:lts
+    command: >
+      sh -c "cd /app &&
+             npm install -f &&
+             npm run start"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
