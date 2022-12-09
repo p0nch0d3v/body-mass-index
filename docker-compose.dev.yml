@@ -2,12 +2,12 @@ version: '3'
 
 services:
   app:
-    image: node:lts
+    image: node:lts-alpine
     command: >
       sh -c "cd /app &&
-             npm install -f &&
-             npm run start"
+             npm install &&
+             npm run dev"
     volumes:
       - .:/app
     ports:
-      - 3000:3000
+      - 2999:3000
