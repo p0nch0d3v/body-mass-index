@@ -37,7 +37,7 @@ export function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container fluid>
-        <h1>Body Mass Index</h1>
+        <h1 style={{textAlign: 'center'}}>Body Mass Index</h1>
         <HeightAndWeightInput onCalculate={calculateHandler} />
         <hr />
         <Results bmi={bmi} height={height} />
